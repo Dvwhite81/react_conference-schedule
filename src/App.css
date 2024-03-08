@@ -1,33 +1,45 @@
+:root {
+  --nav-height: 10vh;
+  --main-height: 90vh;
+}
+
 #root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background: url(/src/assets/images/black-design-background.jpg);
+  background-size: cover;
+  height: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+  display: grid;
+  grid-template-rows: var(--nav-height) var(--main-height);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left,
+.right {
+  align-items: center;
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo, .icon, a {
+  cursor: pointer;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.logo:hover,
+.icon:hover,
+a:hover,
+.link-item:hover {
+  transform: scale(1.2);
+}
+
+.icon {
+  height: 7vh;
+}
+
+li {
+  list-style-type: none;
 }

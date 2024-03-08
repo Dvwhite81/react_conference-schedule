@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-logo {
+  height: 8vh;
+  margin: 0 1.5rem;
+}
+
+.navbar h1 {
+  font-weight: bolder;
+}
+
+.dropdown {
+  display: flex;
+  font-size: larger;
+  position: absolute;
+  right: 0;
+  top: var(--nav-height);
+  width: 10vw;
+}
+
+.dropdown li {
+  margin: 0.5rem 0;
+}
