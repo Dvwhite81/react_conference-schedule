@@ -33,13 +33,7 @@
 }
 
 .nav-right-links {
-  display: none;
-}
-
-@media screen and (min-width: 700px) {
-  .nav-right-links {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }

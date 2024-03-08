@@ -7,9 +7,10 @@ import DropdownMenu from './DropdownMenu';
 import '../styles/NavBar.css';
 
 interface NavBarProps {
+  isMobile: boolean;
 }
 
-const NavBar = ({}: NavBarProps) => {
+const NavBar = ({ isMobile }: NavBarProps) => {
   const [dropVisible, setDropVisible] = useState(false);
   return (
     <nav className="navbar">
@@ -27,11 +28,13 @@ const NavBar = ({}: NavBarProps) => {
         <Tooltip id="nav-home-tip" />
       </div>
       <div className="right">
-        <div className="nav-right-links">
-          <a>Home</a>
-          <a>Speakers</a>
-          <a>Agenda</a>
-        </div>
+        {!isMobile && (
+          <div className="nav-right-links">
+            <a>Home</a>
+            <a>Speakers</a>
+            <a>Agenda</a>
+          </div>
+        )}
         <img
           className="icon navbar-logo"
           src={MenuIcon}
